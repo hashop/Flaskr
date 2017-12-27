@@ -25,4 +25,47 @@ app = Flask(__name__)
 ```
 
 Usage:
-FLASK_APP=demo.py flask run
+```python
+# Simple launch
+FLASK_APP=flaskr.py flask run
+
+# Normal startup
+export FLASK_APP=flaskr
+export FLASK_DEBUG=true
+flask run
+```
+
+
+Start/Stop install:
+```
+pip install --editable
+pip freeze
+```
+
+Create database:
+```
+# This references initdb_command() in flaskr.py
+flask initdb
+```
+
+
+Create schema
+```
+sqlite3 /tmp/flaskr.db < schema.sql
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
